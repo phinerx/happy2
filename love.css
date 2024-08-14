@@ -1,0 +1,167 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f8ff;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #6a0dad; /* Purple */
+    animation: fadeIn 2s ease-in, rgbAnimation 5s infinite alternate;
+}
+
+.date {
+    font-size: 24px;
+    color: #d9a8d4; /* Light Purple */
+}
+
+.approaching {
+    font-size: 24px;
+    color: #6a0dad; /* Purple */
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in, rgbAnimation 5s infinite alternate;
+}
+
+#timer {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#timer span {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #6a0dad; /* Purple */
+    display: inline-block;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.birthday-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.birthday-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid #6a0dad; /* Purple */
+}
+
+.message-section {
+    margin-top: 20px;
+}
+
+.message-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #6a0dad; /* Purple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.message-section button:hover {
+    background: #4b0082; /* Darker Purple */
+    transform: scale(1.05);
+}
+
+.gallery {
+    margin-top: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6a0dad; /* Purple */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rgbAnimation {
+    0% {
+        color: #ff1493; /* Pink */
+    }
+    50% {
+        color: #6a0dad; /* Purple */
+    }
+    100% {
+        color: #1e90ff; /* Dodger Blue */
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .date {
+        font-size: 20px;
+    }
+
+    .approaching h2 {
+        font-size: 20px;
+    }
+
+    #timer {
+        font-size: 24px;
+    }
+
+    .birthday-image {
+        width: 100%;
+    }
+
+    .birthday-video {
+        width: 100%;
+    }
+
+    .message-section button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
